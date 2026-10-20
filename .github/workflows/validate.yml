@@ -1,0 +1,22 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 校验结构、索引与先修图
+        run: python tools/validate.py
+
+      - name: 检查 README 专业表是否与索引同步
+        run: python tools/sync_readme.py --check

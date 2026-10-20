@@ -1,0 +1,21 @@
+# 用户学习进度（本地生成，不要提交）
+.major-coach/
+*.bak.*
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# 临时
+*.tmp
+*.log
+build/

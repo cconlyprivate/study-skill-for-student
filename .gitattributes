@@ -1,0 +1,8 @@
+# 统一换行，避免 Windows 上 clone 出来的 .sh 带 CRLF 直接跑不起来
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.ps1   text eol=crlf
+*.bat   text eol=crlf
+*.png   binary
+*.jpg   binary
